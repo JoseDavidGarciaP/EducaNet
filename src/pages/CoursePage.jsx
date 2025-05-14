@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { BookOpen, Users, Clock, BarChart2, Star, PlayCircle, Download, MessageSquare } from 'lucide-react';
-import resources from '@/data/resources'; // Usaremos esto para simular datos de cursos/lecciones
+import resources from '@/data/resources'; // Usamos esto para simular datos de cursos/lecciones
 
 // Simular datos de un curso específico
 const getCourseData = (courseId) => {
@@ -35,10 +35,10 @@ const getCourseData = (courseId) => {
 
 const CoursePage = () => {
   const { courseId } = useParams();
-  const course = getCourseData(courseId); // En una app real, harías fetch de los datos del curso
+  const course = getCourseData(courseId); 
 
   if (!course) {
-    return <div>Curso no encontrado.</div>; // O una página de error más elaborada
+    return <div>Curso no encontrado.</div>; 
   }
 
   return (
@@ -60,10 +60,10 @@ const CoursePage = () => {
               <span>{course.rating} / 5.0</span>
               <span>•</span>
               <Users className="h-4 w-4" />
-              <span>{course.students} estudiantes</span>
+              <span>{course.students} Estudiantes</span>
               <span>•</span>
               <BookOpen className="h-4 w-4" />
-              <span>{course.totalLessons} lecciones</span>
+              <span>{course.totalLessons} Lecciones</span>
             </div>
           </div>
         </div>

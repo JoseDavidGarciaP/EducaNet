@@ -23,7 +23,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-sm text-primary-foreground/80 dark:text-slate-400">
-              Recursos educativos interactivos para todas las edades. Aprende y diviértete.
+              Recursos educativos interactivos para todas las edades. Aprende sin límites.
             </p>
           </div>
 

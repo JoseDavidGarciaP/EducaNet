@@ -86,7 +86,7 @@ const ResourceCard = ({ resource }) => {
           <img  
             class="w-full h-full object-cover transition-all duration-500 ease-in-out transform group-hover:scale-110" 
             alt={`Miniatura del recurso: ${title}`}
-           src="https://images.unsplash.com/photo-1695473507886-d49ecd5d3c73" />
+            src="https://images.unsplash.com/photo-1695473507886-d49ecd5d3c73" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
         
