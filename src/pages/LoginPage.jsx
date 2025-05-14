@@ -18,9 +18,9 @@ const LoginPage = ({ login }) => {
   const navigate = useNavigate();
   const { theme } = useContext(ThemeContext);
   const siteName = "EducaNet";
-  const logoUrl = "https://storage.googleapis.com/hostinger-horizons-assets-prod/ab230e52-a001-47c9-bc4e-f3021b284619/12025d89fd2e165c2b3b103e3b107a01.png";
-  const googleLogoUrl = "https://storage.googleapis.com/hostinger-horizons-assets-prod/ab230e52-a001-47c9-bc4e-f3021b284619/6eebdc9bc3eaa7431ef7d5899f346219.png";
-  const facebookLogoUrl = "https://storage.googleapis.com/hostinger-horizons-assets-prod/ab230e52-a001-47c9-bc4e-f3021b284619/353c4a2ded98104f88df4183e75a87c2.png";
+  const logoUrl = "public/LogoEducaNet.webp";
+  const googleLogoUrl = "public/logo_google.webp";
+  const facebookLogoUrl = "public/logo_facebook.webp";
 
 
   const handleSubmit = async (e) => {
@@ -53,7 +53,7 @@ const LoginPage = ({ login }) => {
         <Card className="shadow-2xl overflow-hidden glassmorphism">
           <CardHeader className="text-center bg-primary/10 dark:bg-primary/20 p-6">
             <Link to="/" className="mx-auto flex items-center justify-center space-x-2 mb-4">
-                <img src={logoUrl} alt={`${siteName} Logo`} className="h-10 w-auto" />
+                <img src={logoUrl} alt={`${siteName} Logo`} className="h-16 w-auto" />
                 <span className="text-2xl font-bold text-foreground">{siteName}</span>
             </Link>
             <CardTitle className="text-3xl font-bold text-primary">¡Bienvenido de Nuevo!</CardTitle>

@@ -32,7 +32,7 @@ const renderNavItems = (items, user, onLinkClick) => items.map(item => (
 const MobileMenu = ({ isOpen, toggleMenu, navItems, user, logout }) => {
   const { mainNavItems, subjectNavItems, utilityNavItems } = navItems;
   const siteName = "EducaNet";
-  const logoUrl = "https://storage.googleapis.com/hostinger-horizons-assets-prod/ab230e52-a001-47c9-bc4e-f3021b284619/12025d89fd2e165c2b3b103e3b107a01.png";
+  const logoUrl = "public/LogoEducaNet.webp";
 
   return (
     <AnimatePresence>

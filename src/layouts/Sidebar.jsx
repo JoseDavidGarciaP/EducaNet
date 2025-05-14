@@ -31,7 +31,7 @@ const renderNavItems = (items, user, onLinkClick) => items.map(item => (
 const Sidebar = ({ isOpen, navItems, user, logout, toggleSidebar }) => {
   const { mainNavItems, subjectNavItems, utilityNavItems } = navItems;
   const siteName = "EducaNet";
-  const logoUrl = "https://storage.googleapis.com/hostinger-horizons-assets-prod/ab230e52-a001-47c9-bc4e-f3021b284619/12025d89fd2e165c2b3b103e3b107a01.png";
+  const logoUrl = "public/LogoEducaNet.webp";
 
   if (!isOpen) return null;
 
@@ -45,7 +45,7 @@ const Sidebar = ({ isOpen, navItems, user, logout, toggleSidebar }) => {
     >
       <div className="flex items-center justify-between mb-4">
         <Link to="/" className="flex items-center space-x-2" onClick={toggleSidebar}>
-          <img src={logoUrl} alt={`${siteName} Logo`} className="h-8 w-auto" />
+          <img src={logoUrl} alt={`${siteName} Logo`} className="h-16 w-auto" />
           <span className="text-xl font-bold text-foreground">
             {siteName}
           </span>

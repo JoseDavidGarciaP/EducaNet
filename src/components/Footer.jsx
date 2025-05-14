@@ -8,7 +8,7 @@ import { Mail } from 'lucide-react';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const siteName = "EducaNet";
-  const logoUrl = "https://storage.googleapis.com/hostinger-horizons-assets-prod/ab230e52-a001-47c9-bc4e-f3021b284619/12025d89fd2e165c2b3b103e3b107a01.png";
+  const logoUrl = "public/LogoEducaNet.webp";
 
 
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <img src={logoUrl} alt={`${siteName} Logo`} className="h-10 w-auto" />
+              <img src={logoUrl} alt={`${siteName} Logo`} className="h-16 w-auto" />
               <span className="text-2xl font-bold text-white">
                 {siteName}
               </span>

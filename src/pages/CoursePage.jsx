@@ -51,7 +51,7 @@ const CoursePage = () => {
       {/* Encabezado del Curso */}
       <Card className="overflow-hidden shadow-xl">
         <div className="relative h-64 md:h-80 w-full">
-          <img  src={course.coverImage} alt={`Portada del curso ${course.title}`} class="absolute inset-0 w-full h-full object-cover"  src="https://images.unsplash.com/photo-1582899073834-368dbc6ffb1e" />
+          <img src={course.coverImage} alt={`Portada del curso ${course.title}`} className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
           <div className="absolute bottom-0 left-0 p-6 md:p-8">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">{course.title}</h1>

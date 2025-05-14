@@ -60,7 +60,7 @@ const AiHelperPage = () => {
           <div className="flex items-center space-x-3">
             <ShieldQuestion className="h-10 w-10" />
             <div>
-              <CardTitle className="text-3xl font-bold">Asistente IA EduDivertido</CardTitle>
+              <CardTitle className="text-3xl font-bold">Asistente IA EducaNet</CardTitle>
               <CardDescription className="text-white/80 mt-1">
                 Obtén ayuda personalizada, explicaciones y recomendaciones de contenido.
               </CardDescription>
