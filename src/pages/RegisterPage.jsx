@@ -131,7 +131,7 @@ const RegisterPage = ({ register }) => {
                 <span className="w-full border-t border-border" />
               </div>
               <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-card px-2 text-muted-foreground">O regístrate con</span>
+                <span className="px-2 text-foreground">O continúa con</span>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
