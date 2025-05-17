@@ -32,7 +32,7 @@ const renderNavItems = (items, user, onLinkClick) => items.map(item => (
 const MobileMenu = ({ isOpen, toggleMenu, navItems, user, logout }) => {
   const { mainNavItems, subjectNavItems, utilityNavItems } = navItems;
   const siteName = "EducaNet";
-  const logoUrl = "public/LogoEducaNet.webp";
+  const logoUrl = "public/images/LogoEducaNet.webp";
 
   return (
     <AnimatePresence>
@@ -55,7 +55,7 @@ const MobileMenu = ({ isOpen, toggleMenu, navItems, user, logout }) => {
         >
           <div className="flex justify-between items-center mb-6">
             <Link to="/" className="flex items-center space-x-2" onClick={toggleMenu}>
-              <img src={logoUrl} alt={`${siteName} Logo`} className="h-8 w-auto" />
+              <img src={logoUrl} alt={`${siteName} Logo`} className="h-12 w-auto" />
               <span className="text-lg font-bold text-foreground">{siteName}</span>
             </Link>
             <Button variant="ghost" size="icon" onClick={toggleMenu}>
