@@ -8,7 +8,7 @@ import { Mail } from 'lucide-react';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const siteName = "EducaNet";
-  const logoUrl = "public/LogoEducaNet.webp";
+  const logoUrl = "/images/LogoEducaNet.webp";
 
 
   return (

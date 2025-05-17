@@ -31,7 +31,7 @@ const renderNavItems = (items, user, onLinkClick) => items.map(item => (
 const Sidebar = ({ isOpen, navItems, user, logout, toggleSidebar }) => {
   const { mainNavItems, subjectNavItems, utilityNavItems } = navItems;
   const siteName = "EducaNet";
-  const logoUrl = "public/LogoEducaNet.webp";
+  const logoUrl = "/images/LogoEducaNet.webp";
 
   if (!isOpen) return null;
 

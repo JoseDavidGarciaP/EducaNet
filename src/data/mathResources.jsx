@@ -6,9 +6,10 @@ const mathResources = [
     description: 'Aprende a sumar y restar fracciones con ejemplos visuales interactivos.',
     type: 'Actividad',
     level: 'Primaria',
-    subject: 'Matemáticas',
+    subject: 'matematicas',
     rating: 5,
-    content: 'Este recurso incluye actividades interactivas para aprender fracciones de manera divertida. Los estudiantes podrán visualizar fracciones, compararlas y realizar operaciones básicas.'
+    content: 'Este recurso incluye actividades interactivas para aprender fracciones de manera divertida. Los estudiantes podrán visualizar fracciones, compararlas y realizar operaciones básicas.',
+    image: '/images/matematicas/matematicas-1.webp'
   },
   {
     id: 'math-2',
@@ -16,9 +17,10 @@ const mathResources = [
     description: 'Explora las formas geométricas y sus propiedades con ejemplos 3D.',
     type: 'Video',
     level: 'Primaria',
-    subject: 'Matemáticas',
+    subject: 'matematicas',
     rating: 4,
-    content: 'Video educativo que explica los conceptos básicos de geometría, incluyendo formas, ángulos y propiedades. Incluye ejemplos visuales en 3D para mejor comprensión.'
+    content: 'Video educativo que explica los conceptos básicos de geometría, incluyendo formas, ángulos y propiedades. Incluye ejemplos visuales en 3D para mejor comprensión.',
+    image: '/images/matematicas/matematicas-2.webp'
   },
   {
     id: 'math-3',
@@ -26,9 +28,10 @@ const mathResources = [
     description: 'Introducción a ecuaciones y variables para estudiantes de secundaria.',
     type: 'Documento',
     level: 'Secundaria',
-    subject: 'Matemáticas',
+    subject: 'matematicas',
     rating: 5,
-    content: 'Documento completo que introduce los conceptos básicos del álgebra, ecuaciones de primer grado, variables y resolución de problemas algebraicos simples.'
+    content: 'Documento completo que introduce los conceptos básicos del álgebra, ecuaciones de primer grado, variables y resolución de problemas algebraicos simples.',
+    image: '/images/matematicas/matematicas-3.webp'
   },
   {
     id: 'math-4',
@@ -36,9 +39,10 @@ const mathResources = [
     description: 'Practica las tablas de multiplicar con este juego interactivo.',
     type: 'Juego',
     level: 'Primaria',
-    subject: 'Matemáticas',
+    subject: 'matematicas',
     rating: 5,
-    content: 'Juego educativo para practicar las tablas de multiplicar. Los estudiantes pueden competir contra el reloj o contra otros jugadores para mejorar sus habilidades.'
+    content: 'Juego educativo para practicar las tablas de multiplicar. Los estudiantes pueden competir contra el reloj o contra otros jugadores para mejorar sus habilidades.',
+    image: '/images/matematicas/matematicas-4.webp'
   },
 ];
 

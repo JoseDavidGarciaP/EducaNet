@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { BookOpen, Users, Clock, BarChart2, Star, PlayCircle, Download, MessageSquare } from 'lucide-react';
 import resources from '@/data/resources'; // Usamos esto para simular datos de cursos/lecciones
+import { formatSubject } from '@/utils/subject';
+
 
 // Simular datos de un curso específico
 const getCourseData = (courseId) => {
@@ -15,8 +17,8 @@ const getCourseData = (courseId) => {
   const baseResource = resources.find(r => r.id.startsWith(courseId.split('-')[0])) || resources[0];
   return {
     id: courseId,
-    title: `Curso Avanzado de ${baseResource.subject.charAt(0).toUpperCase() + baseResource.subject.slice(1)}`,
-    description: `Un curso completo para dominar ${baseResource.subject}. Aprende desde los fundamentos hasta técnicas avanzadas con proyectos prácticos y quizzes interactivos. Ideal para estudiantes de ${baseResource.level}.`,
+    title: `Curso Avanzado de ${formatSubject(baseResource.subject)}`,
+    description: `Un curso completo para dominar ${formatSubject(baseResource.subject)}. Aprende desde los fundamentos hasta técnicas avanzadas con proyectos prácticos y quizzes interactivos. Ideal para estudiantes de ${baseResource.level}.`,
     instructor: { name: 'Dr. Expert Educador', avatarUrl: 'https://avatar.vercel.sh/expert.png', bio: 'Más de 10 años enseñando y apasionado por la educación digital.' },
     modules: [
       { id: 'mod1', title: 'Introducción y Fundamentos', lessons: [{ id: 'lec1a', title: 'Conceptos Clave', duration: '15 min' }, { id: 'lec1b', title: 'Historia y Evolución', duration: '22 min' }] },

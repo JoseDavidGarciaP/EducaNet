@@ -18,9 +18,9 @@ const LoginPage = ({ login }) => {
   const navigate = useNavigate();
   const { theme } = useContext(ThemeContext);
   const siteName = "EducaNet";
-  const logoUrl = "public/LogoEducaNet.webp";
-  const googleLogoUrl = "public/logo_google.webp";
-  const facebookLogoUrl = "public/logo_facebook.webp";
+  const logoUrl = "/images/LogoEducaNet.webp";
+  const googleLogoUrl = "/images/logo_google.webp";
+  const facebookLogoUrl = "/images/logo_facebook.webp";
 
 
   const handleSubmit = async (e) => {

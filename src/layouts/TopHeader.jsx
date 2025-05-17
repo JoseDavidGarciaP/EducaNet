@@ -16,7 +16,7 @@ import { Input } from '@/components/ui/input';
 
 const TopHeader = ({ toggleSidebar, isSidebarOpen, user, logout, theme, toggleTheme }) => {
   const siteName = "EducaNet";
-  const logoUrl = "public/LogoEducaNet.webp";
+  const logoUrl = "/images/LogoEducaNet.webp";
 
 
   return (

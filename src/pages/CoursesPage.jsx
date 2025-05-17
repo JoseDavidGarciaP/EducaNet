@@ -9,6 +9,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue, SelectGr
 import { BookOpen, Search, Filter, Star, Users, BarChart3, Tag, Palette } from 'lucide-react';
 import resourcesData from '@/data/resources'; 
 import { getLevelsForFilter } from '@/data/levels';
+import { formatSubject } from '@/utils/subject';
+
 
 const CourseCard = ({ course, index }) => {
   const cardVariants = {
@@ -30,13 +32,16 @@ const CourseCard = ({ course, index }) => {
         <CardHeader className="p-0">
           <div className="relative aspect-[16/10] overflow-hidden">
             <img  
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                alt={`Portada del curso ${course.title}`} src="https://images.unsplash.com/photo-1692984501845-a344a7fe38a8" />
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              alt={`Portada del curso ${course.title}`} 
+              src={course.image || 'https://images.unsplash.com/photo-1692984501845-a344a7fe38a8'} 
+            />
             <div className={`absolute top-3 right-3 p-2.5 rounded-full bg-white/90 backdrop-blur-sm shadow-lg`}>
               {React.cloneElement(course.icon || <BookOpen />, { className: `w-7 h-7 ${course.iconColor || 'text-primary'}`})}
             </div>
             <div className="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black/70 to-transparent">
-                <h3 className="text-lg font-semibold text-white shadow-sm">{course.title}</h3>
+                <h3 className="text-lg font-semibold text-white [text-shadow:_0_1px_3px_rgb(0_0_0_/_80%)]">
+                  {course.title}</h3>
             </div>
           </div>
         </CardHeader>
@@ -112,8 +117,8 @@ const CoursesPage = () => {
 
         acc.push({
           id: `curso-${resource.subject.toLowerCase().replace(/\s+/g, '-')}`,
-          title: `Curso de ${resource.subject}`,
-          description: `Aprende todo sobre ${resource.subject} con nuestros módulos interactivos, cubriendo desde lo básico hasta temas avanzados. Ideal para estudiantes de todos los niveles.`,
+          title: `Curso de ${formatSubject(resource.subject)}`,
+          description: `Aprende todo sobre ${formatSubject(resource.subject)} con nuestros módulos interactivos, cubriendo desde lo básico hasta temas avanzados. Ideal para estudiantes de todos los niveles.`,
           subject: resource.subject,
           lessonCount: 1,
           levels: Array.isArray(resource.level) ? resource.level : [resource.level],
@@ -193,7 +198,9 @@ const CoursesPage = () => {
               </SelectTrigger>
               <SelectContent>
                 {subjects.map(subject => (
-                  <SelectItem key={subject} value={subject}>{subject === 'all' ? 'Todas las materias' : subject}</SelectItem>
+                  <SelectItem key={subject} value={subject}>
+                    {formatSubject(subject)}
+                  </SelectItem>
                 ))}
               </SelectContent>
             </Select>
