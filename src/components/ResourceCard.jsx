@@ -1,12 +1,11 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Download, ExternalLink, Star, PlayCircle, FileText, Gamepad2, Edit3, HelpCircle } from 'lucide-react';
 
-const ResourceCard = ({ resource }) => {
-  const { id, title, description, type, level, subject, rating } = resource;
+const ResourceCard = ({ resource }) => { 
+  const { id, title, description, type, level, subject, rating, image } = resource;
 
   const subjectConfig = {
     matematicas: {
@@ -82,13 +81,19 @@ const ResourceCard = ({ resource }) => {
           </CardTitle>
         </CardHeader>
         
-        <div className="relative h-48 overflow-hidden group">
-          <img  
-            class="w-full h-full object-cover transition-all duration-500 ease-in-out transform group-hover:scale-110" 
+        <div className="relative h-48 overflow-hidden group"> 
+          <img
+            className="w-full h-full object-cover transition-all duration-500 ease-in-out transform group-hover:scale-110"
             alt={`Miniatura del recurso: ${title}`}
-           src="https://images.unsplash.com/photo-1695473507886-d49ecd5d3c73" />
+            src={image || "/images/placeholder.webp"}
+            onError={(e) => {
+              e.target.onerror = null; 
+              e.target.src = "/images/placeholder.webp"; 
+            }}
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
+
         
         <CardContent className="p-4 flex-grow flex flex-col justify-between bg-card">
           <div>

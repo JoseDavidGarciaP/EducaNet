@@ -62,7 +62,7 @@ const CommunityPage = () => {
           <div className="flex items-center space-x-3">
             <Users className="h-10 w-10" />
             <div>
-              <CardTitle className="text-3xl">Comunidad EduDivertido</CardTitle>
+              <CardTitle className="text-3xl">Comunidad EducaNet</CardTitle>
               <CardDescription className="text-primary-foreground/80">Conéctate, comparte y aprende con otros estudiantes.</CardDescription>
             </div>
           </div>

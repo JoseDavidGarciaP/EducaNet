@@ -6,7 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { BookOpen, Users, Clock, BarChart2, Star, PlayCircle, Download, MessageSquare } from 'lucide-react';
-import resources from '@/data/resources'; // Usaremos esto para simular datos de cursos/lecciones
+import resources from '@/data/resources'; // Usamos esto para simular datos de cursos/lecciones
+import { formatSubject } from '@/utils/subject';
+
 
 // Simular datos de un curso específico
 const getCourseData = (courseId) => {
@@ -15,8 +17,8 @@ const getCourseData = (courseId) => {
   const baseResource = resources.find(r => r.id.startsWith(courseId.split('-')[0])) || resources[0];
   return {
     id: courseId,
-    title: `Curso Avanzado de ${baseResource.subject.charAt(0).toUpperCase() + baseResource.subject.slice(1)}`,
-    description: `Un curso completo para dominar ${baseResource.subject}. Aprende desde los fundamentos hasta técnicas avanzadas con proyectos prácticos y quizzes interactivos. Ideal para estudiantes de ${baseResource.level}.`,
+    title: `Curso Avanzado de ${formatSubject(baseResource.subject)}`,
+    description: `Un curso completo para dominar ${formatSubject(baseResource.subject)}. Aprende desde los fundamentos hasta técnicas avanzadas con proyectos prácticos y quizzes interactivos. Ideal para estudiantes de ${baseResource.level}.`,
     instructor: { name: 'Dr. Expert Educador', avatarUrl: 'https://avatar.vercel.sh/expert.png', bio: 'Más de 10 años enseñando y apasionado por la educación digital.' },
     modules: [
       { id: 'mod1', title: 'Introducción y Fundamentos', lessons: [{ id: 'lec1a', title: 'Conceptos Clave', duration: '15 min' }, { id: 'lec1b', title: 'Historia y Evolución', duration: '22 min' }] },
@@ -35,10 +37,10 @@ const getCourseData = (courseId) => {
 
 const CoursePage = () => {
   const { courseId } = useParams();
-  const course = getCourseData(courseId); // En una app real, harías fetch de los datos del curso
+  const course = getCourseData(courseId); 
 
   if (!course) {
-    return <div>Curso no encontrado.</div>; // O una página de error más elaborada
+    return <div>Curso no encontrado.</div>; 
   }
 
   return (
@@ -51,7 +53,7 @@ const CoursePage = () => {
       {/* Encabezado del Curso */}
       <Card className="overflow-hidden shadow-xl">
         <div className="relative h-64 md:h-80 w-full">
-          <img  src={course.coverImage} alt={`Portada del curso ${course.title}`} class="absolute inset-0 w-full h-full object-cover"  src="https://images.unsplash.com/photo-1582899073834-368dbc6ffb1e" />
+          <img src={course.coverImage} alt={`Portada del curso ${course.title}`} className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
           <div className="absolute bottom-0 left-0 p-6 md:p-8">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">{course.title}</h1>
@@ -60,10 +62,10 @@ const CoursePage = () => {
               <span>{course.rating} / 5.0</span>
               <span>•</span>
               <Users className="h-4 w-4" />
-              <span>{course.students} estudiantes</span>
+              <span>{course.students} Estudiantes</span>
               <span>•</span>
               <BookOpen className="h-4 w-4" />
-              <span>{course.totalLessons} lecciones</span>
+              <span>{course.totalLessons} Lecciones</span>
             </div>
           </div>
         </div>

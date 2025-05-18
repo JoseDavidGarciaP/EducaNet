@@ -49,7 +49,7 @@ const HeroSection = () => {
               <img  
                 class="relative z-10 rounded-2xl shadow-2xl border-4 border-white/20 w-full h-full object-cover" 
                 alt="Estudiantes sonrientes aprendiendo con tabletas en un aula colorida"
-               src="https://images.unsplash.com/photo-1694532409273-b26e2ce266ea" />
+                src="/images/cover-img.webp" />
               
               <InteractiveElement 
                 type="bounce" 

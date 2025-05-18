@@ -10,7 +10,8 @@ const resources = [
     level: 'Primaria',
     subject: 'matematicas',
     rating: 5,
-    content: 'Este recurso incluye actividades interactivas para aprender fracciones de manera divertida. Los estudiantes podrán visualizar fracciones, compararlas y realizar operaciones básicas.'
+    content: 'Este recurso incluye actividades interactivas para aprender fracciones de manera divertida. Los estudiantes podrán visualizar fracciones, compararlas y realizar operaciones básicas.',
+    image: '/images/matematicas/matematicas-1.webp'
   },
   {
     id: 'math-2',
@@ -20,7 +21,8 @@ const resources = [
     level: 'Primaria',
     subject: 'matematicas',
     rating: 4,
-    content: 'Video educativo que explica los conceptos básicos de geometría, incluyendo formas, ángulos y propiedades. Incluye ejemplos visuales en 3D para mejor comprensión.'
+    content: 'Video educativo que explica los conceptos básicos de geometría, incluyendo formas, ángulos y propiedades. Incluye ejemplos visuales en 3D para mejor comprensión.',
+    image: '/images/matematicas/matematicas-2.webp'
   },
   {
     id: 'math-3',
@@ -30,7 +32,8 @@ const resources = [
     level: 'Secundaria',
     subject: 'matematicas',
     rating: 5,
-    content: 'Documento completo que introduce los conceptos básicos del álgebra, ecuaciones de primer grado, variables y resolución de problemas algebraicos simples.'
+    content: 'Documento completo que introduce los conceptos básicos del álgebra, ecuaciones de primer grado, variables y resolución de problemas algebraicos simples.',
+    image: '/images/matematicas/matematicas-3.webp'
   },
   {
     id: 'math-4',
@@ -40,7 +43,8 @@ const resources = [
     level: 'Primaria',
     subject: 'matematicas',
     rating: 5,
-    content: 'Juego educativo para practicar las tablas de multiplicar. Los estudiantes pueden competir contra el reloj o contra otros jugadores para mejorar sus habilidades.'
+    content: 'Juego educativo para practicar las tablas de multiplicar. Los estudiantes pueden competir contra el reloj o contra otros jugadores para mejorar sus habilidades.',
+    image: '/images/matematicas/matematicas-4.webp'
   },
 
   // Español
@@ -52,7 +56,8 @@ const resources = [
     level: 'Primaria',
     subject: 'espanol',
     rating: 4,
-    content: 'Serie de ejercicios para mejorar la ortografía, incluyendo reglas de acentuación, uso de b/v, h, g/j y más. Incluye ejemplos y práctica interactiva.'
+    content: 'Serie de ejercicios para mejorar la ortografía, incluyendo reglas de acentuación, uso de b/v, h, g/j y más. Incluye ejemplos y práctica interactiva.',
+    image: '/images/espanol/espanol-1.webp'
   },
   {
     id: 'spanish-2',
@@ -62,7 +67,8 @@ const resources = [
     level: 'Secundaria',
     subject: 'espanol',
     rating: 5,
-    content: 'Colección de textos cortos de diferentes géneros con preguntas de comprensión lectora. Incluye estrategias para identificar ideas principales, inferencias y análisis crítico.'
+    content: 'Colección de textos cortos de diferentes géneros con preguntas de comprensión lectora. Incluye estrategias para identificar ideas principales, inferencias y análisis crítico.',
+    image: '/images/espanol/espanol-2.webp'
   },
   {
     id: 'spanish-3',
@@ -72,7 +78,8 @@ const resources = [
     level: 'Primaria',
     subject: 'espanol',
     rating: 4,
-    content: 'Video educativo que explica los conceptos básicos de gramática española, incluyendo las partes de la oración, conjugación de verbos y estructura sintáctica.'
+    content: 'Video educativo que explica los conceptos básicos de gramática española, incluyendo las partes de la oración, conjugación de verbos y estructura sintáctica.',
+    image: '/images/espanol/espanol-3.webp'
   },
   {
     id: 'spanish-4',
@@ -82,7 +89,8 @@ const resources = [
     level: 'Secundaria',
     subject: 'espanol',
     rating: 4,
-    content: 'Cuestionario interactivo para evaluar el conocimiento de sinónimos y antónimos. Incluye diferentes niveles de dificultad y explicaciones para cada respuesta.'
+    content: 'Cuestionario interactivo para evaluar el conocimiento de sinónimos y antónimos. Incluye diferentes niveles de dificultad y explicaciones para cada respuesta.',
+    image: '/images/espanol/espanol-4.webp'
   },
 
   // Ciencias Naturales
@@ -94,7 +102,8 @@ const resources = [
     level: 'Primaria',
     subject: 'ciencias',
     rating: 5,
-    content: 'Actividad interactiva que permite explorar los diferentes sistemas del cuerpo humano, incluyendo el digestivo, respiratorio, circulatorio y nervioso, con animaciones detalladas.'
+    content: 'Actividad interactiva que permite explorar los diferentes sistemas del cuerpo humano, incluyendo el digestivo, respiratorio, circulatorio y nervioso, con animaciones detalladas.',
+    image: '/images/ciencias/ciencias-1.webp'
   },
   {
     id: 'science-2',
@@ -104,7 +113,8 @@ const resources = [
     level: 'Secundaria',
     subject: 'ciencias',
     rating: 4,
-    content: 'Video educativo que muestra los principales ecosistemas del mundo, explicando sus características, clima, flora y fauna, así como la importancia de su conservación.'
+    content: 'Video educativo que muestra los principales ecosistemas del mundo, explicando sus características, clima, flora y fauna, así como la importancia de su conservación.',
+    image: '/images/ciencias/ciencias-2.webp'
   },
   {
     id: 'science-3',
@@ -114,7 +124,8 @@ const resources = [
     level: 'Primaria',
     subject: 'ciencias',
     rating: 5,
-    content: 'Guía completa de experimentos científicos sencillos que se pueden realizar en casa con materiales comunes. Incluye explicaciones de los principios científicos detrás de cada experimento.'
+    content: 'Guía completa de experimentos científicos sencillos que se pueden realizar en casa con materiales comunes. Incluye explicaciones de los principios científicos detrás de cada experimento.',
+    image: '/images/ciencias/ciencias-3.webp'
   },
   {
     id: 'science-4',
@@ -124,7 +135,8 @@ const resources = [
     level: 'Primaria',
     subject: 'ciencias',
     rating: 4,
-    content: 'Simulación interactiva que muestra el ciclo del agua en la naturaleza. Los estudiantes pueden manipular variables como temperatura y presión para ver cómo afectan al ciclo.'
+    content: 'Simulación interactiva que muestra el ciclo del agua en la naturaleza. Los estudiantes pueden manipular variables como temperatura y presión para ver cómo afectan al ciclo.',
+    image: '/images/ciencias/ciencias-4.webp'
   },
 
   // Inglés
@@ -136,7 +148,8 @@ const resources = [
     level: 'Primaria',
     subject: 'ingles',
     rating: 5,
-    content: 'Actividad interactiva para aprender vocabulario básico en inglés, organizado por temas como colores, números, animales, etc. Incluye pronunciación y ejemplos de uso.'
+    content: 'Actividad interactiva para aprender vocabulario básico en inglés, organizado por temas como colores, números, animales, etc. Incluye pronunciación y ejemplos de uso.',
+    image:'/images/ingles/ingles-1.webp'
   },
   {
     id: 'english-2',
@@ -146,7 +159,8 @@ const resources = [
     level: 'Secundaria',
     subject: 'ingles',
     rating: 4,
-    content: 'Documento completo que cubre los aspectos fundamentales de la gramática inglesa, incluyendo tiempos verbales, estructura de oraciones, artículos, preposiciones y más.'
+    content: 'Documento completo que cubre los aspectos fundamentales de la gramática inglesa, incluyendo tiempos verbales, estructura de oraciones, artículos, preposiciones y más.',
+    image:'/images/ingles/ingles-2.webp'
   },
   {
     id: 'english-3',
@@ -156,7 +170,8 @@ const resources = [
     level: 'Secundaria',
     subject: 'ingles',
     rating: 5,
-    content: 'Video con diálogos comunes en situaciones cotidianas como presentarse, pedir direcciones, ordenar en un restaurante, etc. Incluye subtítulos y explicaciones de vocabulario.'
+    content: 'Video con diálogos comunes en situaciones cotidianas como presentarse, pedir direcciones, ordenar en un restaurante, etc. Incluye subtítulos y explicaciones de vocabulario.',
+    image:'/images/ingles/ingles-3.webp'
   },
   {
     id: 'english-4',
@@ -166,7 +181,8 @@ const resources = [
     level: 'Secundaria',
     subject: 'ingles',
     rating: 4,
-    content: 'Juego educativo para aprender y practicar los verbos irregulares en inglés. Incluye diferentes modos de juego como memorama, completar oraciones y conjugación.'
+    content: 'Juego educativo para aprender y practicar los verbos irregulares en inglés. Incluye diferentes modos de juego como memorama, completar oraciones y conjugación.',
+    image:'/images/ingles/ingles-4.webp'
   }
 ];
 

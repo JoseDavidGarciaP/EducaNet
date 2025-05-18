@@ -23,9 +23,9 @@ const RegisterPage = ({ register }) => {
   const navigate = useNavigate();
   const { theme } = useContext(ThemeContext);
   const siteName = "EducaNet";
-  const logoUrl = "https://storage.googleapis.com/hostinger-horizons-assets-prod/ab230e52-a001-47c9-bc4e-f3021b284619/12025d89fd2e165c2b3b103e3b107a01.png";
-  const googleLogoUrl = "https://storage.googleapis.com/hostinger-horizons-assets-prod/ab230e52-a001-47c9-bc4e-f3021b284619/6eebdc9bc3eaa7431ef7d5899f346219.png";
-  const facebookLogoUrl = "https://storage.googleapis.com/hostinger-horizons-assets-prod/ab230e52-a001-47c9-bc4e-f3021b284619/353c4a2ded98104f88df4183e75a87c2.png";
+  const logoUrl = "/images/LogoEducaNet.webp";
+  const googleLogoUrl = "/images/logo_google.webp";
+  const facebookLogoUrl = "/images/logo_facebook.webp";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -131,7 +131,7 @@ const RegisterPage = ({ register }) => {
                 <span className="w-full border-t border-border" />
               </div>
               <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-card px-2 text-muted-foreground">O regístrate con</span>
+                <span className="px-2 text-foreground">O continúa con</span>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
