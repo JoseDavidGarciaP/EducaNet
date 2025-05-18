@@ -212,7 +212,7 @@ const CoursesPage = () => {
                 <BarChart3 className="w-4 h-4 mr-2 text-muted-foreground" />
                 <SelectValue placeholder="Todos los niveles" />
               </SelectTrigger>
-              <SelectContent position="popper" sideOffset={5}>
+              <SelectContent position="popper" sideOffset={5} className="max-h-80 overflow-y-auto">
                 <SelectItem value="all">Todos los niveles</SelectItem>
                 <SelectGroup>
                   <SelectLabel>General</SelectLabel>
