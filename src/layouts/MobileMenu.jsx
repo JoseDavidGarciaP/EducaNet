@@ -32,7 +32,7 @@ const renderNavItems = (items, user, onLinkClick) => items.map(item => (
 const MobileMenu = ({ isOpen, toggleMenu, navItems, user, logout }) => {
   const { mainNavItems, subjectNavItems, utilityNavItems } = navItems;
   const siteName = "EducaNet";
-  const logoUrl = "public/images/LogoEducaNet.webp";
+  const logoUrl = "/images/LogoEducaNet.webp";
 
   return (
     <AnimatePresence>
