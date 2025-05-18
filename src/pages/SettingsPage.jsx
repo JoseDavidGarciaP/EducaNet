@@ -172,7 +172,7 @@ const SettingsPage = () => {
       <Card className="shadow-lg">
         <CardHeader className="bg-gradient-to-r from-primary to-purple-600 text-primary-foreground p-6 rounded-t-lg">
           <CardTitle className="text-3xl flex items-center"><SettingsIcon className="h-8 w-8 mr-3"/>Configuración General</CardTitle>
-          <CardDescription className="text-primary-foreground/80">Personaliza tu experiencia en EduDivertido.</CardDescription>
+          <CardDescription className="text-primary-foreground/80">Personaliza tu experiencia en EducaNet.</CardDescription>
         </CardHeader>
       </Card>
 

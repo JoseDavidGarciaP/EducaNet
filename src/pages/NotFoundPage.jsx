@@ -57,9 +57,9 @@ const NotFoundPage = () => {
         className="mt-12"
       >
         <img  
-          className="max-w-xs mx-auto" 
+          className="max-w-xl mx-auto" 
           alt="Ilustración de página no encontrada"
-         src="https://images.unsplash.com/photo-1561078352-ca378b87a333" />
+          src="https://videos.openai.com/vg-assets/assets%2Ftask_01jvgpr3b2e9es122wapxqatka%2F1747538705_img_2.webp?st=2025-05-18T01%3A50%3A11Z&se=2025-05-24T02%3A50%3A11Z&sks=b&skt=2025-05-18T01%3A50%3A11Z&ske=2025-05-24T02%3A50%3A11Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=UEhnaSMR7QdqghiokVaMgkfSgEmnhCzyp%2B9p1pWYm%2F8%3D&az=oaivgprodscus" />
       </motion.div>
     </div>
   );

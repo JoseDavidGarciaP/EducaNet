@@ -16,17 +16,18 @@ import { Input } from '@/components/ui/input';
 
 const TopHeader = ({ toggleSidebar, isSidebarOpen, user, logout, theme, toggleTheme }) => {
   const siteName = "EducaNet";
-  const logoUrl = "https://storage.googleapis.com/hostinger-horizons-assets-prod/ab230e52-a001-47c9-bc4e-f3021b284619/12025d89fd2e165c2b3b103e3b107a01.png";
+  const logoUrl = "/images/LogoEducaNet.webp";
+
 
   return (
     <header className="bg-card border-b border-border shadow-sm h-16 flex items-center justify-between px-4 md:px-6 sticky top-0 z-30">
       <div className="flex items-center">
         <Button variant="ghost" size="icon" onClick={toggleSidebar} className="mr-2 p-2 rounded-full hover:bg-accent">
-           {isSidebarOpen ? <X className="h-5 w-5 text-foreground" /> : <Menu className="h-5 w-5 text-foreground" />}
+            {isSidebarOpen ? <X className="h-5 w-5 text-foreground" /> : <Menu className="h-5 w-5 text-foreground" />}
         </Button>
         
         <Link to="/" className="items-center space-x-2 flex">
-             <img src={logoUrl} alt={`${siteName} Logo`} className="h-8 w-auto" />
+            <img src={logoUrl} alt={`${siteName} Logo`} className="h-10 sm:h-12 md:h-14 shrink-0 w-auto max-w-[120px]" />
             <span className="text-xl font-bold text-foreground hidden sm:inline">
                 {siteName}
             </span>
