@@ -54,14 +54,14 @@ const Footer = () => {
             </p>
             <form className="flex flex-col sm:flex-row gap-2">
               <div className="relative flex-grow">
-                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground dark:text-slate-500" />
+                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white/70 dark:text-white/70" />
                 <Input 
                   type="email" 
                   placeholder="Tu correo electrónico" 
                   className="w-full pl-10 pr-4 py-2.5 rounded-md bg-primary-foreground/20 dark:bg-slate-800 border-transparent focus:border-white dark:focus:border-primary text-primary-foreground dark:text-white placeholder:text-primary-foreground/60 dark:placeholder:text-slate-400"
                 />
               </div>
-              <Button type="submit" variant="secondary" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shrink-0">
+              <Button type="submit" variant="secondary" className="bg-white/75 hover:bg-white text-black shrink-0">
                 Enviar
               </Button>
             </form>
