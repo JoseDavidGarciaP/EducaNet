@@ -94,7 +94,7 @@ const Testimonials = () => {
                   <img    
                     class={`w-20 h-20 rounded-full object-cover border-4 ${testimonial.borderColor} shadow-md`} 
                     alt={`Foto de perfil de ${testimonial.name}`}
-                    src="https://images.unsplash.com/photo-1694388001616-1176f534d72f" />
+                    src={testimonial.avatar} />
                 </div>
                 <div className="flex mb-3">
                   {[...Array(5)].map((_, i) => (
