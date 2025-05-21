@@ -195,14 +195,14 @@ const ResourcePage = () => {
               <TabsTrigger value="comentarios" className="text-center">Comentarios ({comments.length})</TabsTrigger>
             </TabsList>
             
-            <TabsContent value="descripcion" className="p-6 bg-white rounded-xl shadow-sm">
+            <TabsContent value="descripcion" className="p-6 bg-card rounded-xl shadow-sm border">
               <h2 className="text-xl font-bold mb-4">Descripción</h2>
-              <p className="text-gray-700 mb-4">{resource.description}</p>
-              <p className="text-gray-700">{resource.content}</p>
+              <p className="text-muted-foreground mb-4">{resource.description}</p>
+              <p className="text-card-foreground">{resource.content}</p>
               
-              <div className="mt-6 pt-6 border-t border-gray-200">
+              <div className="mt-6 pt-6 border-t border-border">
                 <h3 className="text-lg font-semibold mb-3">Detalles del recurso</h3>
-                <ul className="space-y-2 text-gray-700">
+                <ul className="space-y-2 text-card-foreground">
                   <li className="flex items-start">
                     <span className="font-medium w-32">Tipo:</span>
                     <span>{resource.type.charAt(0).toUpperCase() + resource.type.slice(1)}</span>
@@ -222,40 +222,42 @@ const ResourcePage = () => {
                         <Star
                           key={i}
                           className={`h-4 w-4 ${
-                            i < resource.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'
+                            i < resource.rating 
+                              ? 'text-yellow-400 fill-yellow-400' 
+                              : 'text-muted-foreground/40'
                           }`}
                         />
                       ))}
-                      <span className="ml-1">({resource.rating}.0)</span>
+                      <span className="ml-1 text-card-foreground">({resource.rating}.0)</span>
                     </div>
                   </li>
                 </ul>
               </div>
             </TabsContent>
             
-            <TabsContent value="contenido" className="p-6 bg-white rounded-xl shadow-sm">
+            <TabsContent value="contenido" className="p-6 bg-card rounded-xl shadow-sm border">
               <h2 className="text-xl font-bold mb-4">Contenido del recurso</h2>
-              <p className="text-gray-700 mb-6">{resource.content}</p>
+              <p className="text-card-foreground mb-6">{resource.content}</p>
               
               {resource.type === 'video' && (
-                <div className="aspect-w-16 aspect-h-9 mb-6 bg-gray-100 rounded-lg flex items-center justify-center">
+                <div className="aspect-w-16 aspect-h-9 mb-6 bg-muted rounded-lg flex items-center justify-center">
                   <div className="text-center p-8">
-                    <p className="text-gray-500 mb-4">Vista previa del video</p>
+                    <p className="text-muted-foreground mb-4">Vista previa del video</p>
                     <Button>Reproducir video</Button>
                   </div>
                 </div>
               )}
               
               {resource.type === 'documento' && (
-                <div className="border border-gray-200 rounded-lg p-4 mb-6">
+                <div className="border border-border rounded-lg p-4 mb-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
-                      <div className="bg-red-100 p-2 rounded-lg mr-3">
+                      <div className="bg-red-100 dark:bg-red-900/30 p-2 rounded-lg mr-3">
                         <span className="text-2xl">📄</span>
                       </div>
                       <div>
-                        <p className="font-medium">{resource.title}.pdf</p>
-                        <p className="text-sm text-gray-500">Documento PDF - 2.4 MB</p>
+                        <p className="font-medium text-card-foreground">{resource.title}.pdf</p>
+                        <p className="text-sm text-muted-foreground">Documento PDF - 2.4 MB</p>
                       </div>
                     </div>
                     <Button variant="outline" size="sm" onClick={handleDownload}>
@@ -267,9 +269,9 @@ const ResourcePage = () => {
               )}
               
               {resource.type === 'actividad' && (
-                <div className="bg-purple-50 border border-purple-200 rounded-lg p-6 mb-6">
+                <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-6 mb-6">
                   <h3 className="text-lg font-semibold mb-3">Instrucciones de la actividad</h3>
-                  <ol className="list-decimal pl-5 space-y-2 text-gray-700 mb-4">
+                  <ol className="list-decimal pl-5 space-y-2 text-card-foreground mb-4">
                     <li>Lee detenidamente el material proporcionado.</li>
                     <li>Completa los ejercicios siguiendo las indicaciones.</li>
                     <li>Verifica tus respuestas con las soluciones proporcionadas.</li>
@@ -280,9 +282,9 @@ const ResourcePage = () => {
               )}
               
               {resource.type === 'juego' && (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+                <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-6 mb-6">
                   <h3 className="text-lg font-semibold mb-3">Sobre el juego</h3>
-                  <p className="text-gray-700 mb-4">Este juego educativo te permitirá aprender de forma divertida e interactiva. Pon a prueba tus conocimientos y compite por la mejor puntuación.</p>
+                  <p className="text-card-foreground mb-4">Este juego educativo te permitirá aprender de forma divertida e interactiva. Pon a prueba tus conocimientos y compite por la mejor puntuación.</p>
                   <div className="flex justify-center">
                     <InteractiveElement type="pulse">
                       <Button className="bg-gradient-to-r from-green-500 to-teal-500">
@@ -294,9 +296,9 @@ const ResourcePage = () => {
               )}
               
               {resource.type === 'quiz' && (
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 mb-6">
                   <h3 className="text-lg font-semibold mb-3">Información del quiz</h3>
-                  <ul className="space-y-2 text-gray-700 mb-4">
+                  <ul className="space-y-2 text-card-foreground mb-4">
                     <li className="flex items-center">
                       <span className="font-medium w-32">Preguntas:</span>
                       <span>10 preguntas</span>
@@ -316,16 +318,16 @@ const ResourcePage = () => {
                 </div>
               )}
             </TabsContent>
-            
-            <TabsContent value="comentarios" className="p-6 bg-white rounded-xl shadow-sm">
+
+            <TabsContent value="comentarios" className="p-6 bg-card rounded-xl shadow-sm border">
               <h2 className="text-xl font-bold mb-4">Comentarios ({comments.length})</h2>
               
               {/* Formulario de comentario */}
               <form onSubmit={handleCommentSubmit} className="mb-6">
-                <div className="border border-gray-200 rounded-lg overflow-hidden mb-2">
+                <div className="border border-border rounded-lg overflow-hidden mb-2">
                   <textarea
                     placeholder="Escribe un comentario..."
-                    className="w-full p-3 outline-none resize-none"
+                    className="w-full p-3 outline-none resize-none bg-background text-card-foreground"
                     rows="3"
                     value={newComment}
                     onChange={(e) => setNewComment(e.target.value)}
@@ -346,28 +348,29 @@ const ResourcePage = () => {
                     initial={comment.id === comments.length ? { opacity: 0, y: 20 } : false}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="border border-gray-100 rounded-lg p-4"
+                    className="border border-border rounded-lg p-4"
                   >
                     <div className="flex items-start">
-                      <div className="w-10 h-10 rounded-full overflow-hidden mr-3 bg-gray-200 flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full overflow-hidden mr-3 bg-muted flex-shrink-0">
                         <img  
                           className="w-full h-full object-cover" 
                           alt={`Avatar de ${comment.user}`}
-                         src="https://images.unsplash.com/photo-1652841190565-b96e0acbae17" />
+                          src="https://images.unsplash.com/photo-1652841190565-b96e0acbae17" 
+                        />
                       </div>
                       <div className="flex-grow">
                         <div className="flex justify-between items-center mb-1">
-                          <h4 className="font-semibold">{comment.user}</h4>
-                          <span className="text-xs text-gray-500">{comment.date}</span>
+                          <h4 className="font-semibold text-card-foreground">{comment.user}</h4>
+                          <span className="text-xs text-muted-foreground">{comment.date}</span>
                         </div>
-                        <p className="text-gray-700">{comment.text}</p>
-                        <div className="flex items-center mt-2 text-gray-500 text-sm">
-                          <button className="flex items-center hover:text-blue-600">
+                        <p className="text-card-foreground">{comment.text}</p>
+                        <div className="flex items-center mt-2 text-muted-foreground text-sm">
+                          <button className="flex items-center hover:text-primary">
                             <ThumbsUp className="h-4 w-4 mr-1" />
                             <span>Me gusta</span>
                           </button>
                           <span className="mx-2">•</span>
-                          <button className="flex items-center hover:text-blue-600">
+                          <button className="flex items-center hover:text-primary">
                             <MessageSquare className="h-4 w-4 mr-1" />
                             <span>Responder</span>
                           </button>
