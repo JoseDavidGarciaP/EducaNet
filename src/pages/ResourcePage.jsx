@@ -184,7 +184,7 @@ const ResourcePage = () => {
             <img  
               className="w-full h-64 object-cover" 
               alt={`Imagen principal del recurso: ${resource.title}`}
-             src="https://images.unsplash.com/photo-1495131783952-d12ca8c304a8" />
+              src="https://images.unsplash.com/photo-1495131783952-d12ca8c304a8" />
           </div>
           
           {/* Pestañas de contenido */}
@@ -421,12 +421,12 @@ const ResourcePage = () => {
                   .slice(0, 3)
                   .map(relatedResource => (
                     <Link key={relatedResource.id} to={`/recurso/${relatedResource.id}`}>
-                      <div className="flex items-start hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                      <div className="flex items-start hover:bg-gray-50 dark:hover:bg-gray-800 p-2 rounded-lg transition-colors">
                         <div className="w-16 h-16 rounded-lg overflow-hidden mr-3 bg-gray-100 flex-shrink-0">
                           <img  
                             className="w-full h-full object-cover" 
                             alt={`Miniatura de ${relatedResource.title}`}
-                           src="https://images.unsplash.com/photo-1697923760477-1fc617f2b621" />
+                            src={relatedResource.image}/>
                         </div>
                         <div>
                           <h4 className="font-medium text-sm line-clamp-2">{relatedResource.title}</h4>
